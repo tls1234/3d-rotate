@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3d旋转</title>
+<style>
+*{padding:0;margin:0;}
+#container{width:100%;height:100%;-webkit-perspective:4000;-webkit-perspective-origin:50% 50%;-webkit-transform-style:preserve-3d;perspective:4000;perspective-origin:50% 50%;transform-style:preserve-3d;}
+#group{width:40rem;height:40rem;margin:10px auto;position:relative;-webkit-transform-origin:center;-webkit-transform-style:preserve-3d;-webkit-animation:change 8s linear infinite;transform-origin:center;transform-style:preserve-3d;animation:change 8s linear infinite;}
+@-webkit-keyframes change{
+	0%{-webkit-transform:rotateX(0deg) rotateY(0deg);transform:rotateX(0deg) rotateY(0deg);}
+	100%{-webkit-transform:rotateX(360deg) rotateY(360deg);transform:rotateX(360deg) rotateY(360deg);}
+}
+@keyframes change{
+	0%{-webkit-transform:rotateX(0deg) rotateY(0deg);transform:rotateX(0deg) rotateY(0deg);}
+	100%{-webkit-transform:rotateX(360deg) rotateY(360deg);transform:rotateX(360deg) rotateY(360deg);}
+}
+.page{width:20rem;height:20rem;border:2px solid #999;position:absolute;top:10rem;left:10rem;opacity:.4;}
+#page1{background-color:#2196f3;-webkit-transform:translateZ(10rem);transform:translateZ(10rem);}
+#page2{background-color:#ff0000;-webkit-transform:rotateX(90deg) translateZ(-10rem);transform:rotateX(90deg) translateZ(-10rem);}
+#page3{background-color:#ffff00;-webkit-transform:rotateX(90deg) translateZ(10rem);transform:rotateX(90deg) translateZ(10rem);}
+#page4{background-color:#008000;-webkit-transform:rotateY(90deg) translateZ(-10rem);transform:rotateY(90deg) translateZ(-10rem);}
+#page5{background-color:#ff9800;-webkit-transform:rotateY(90deg) translateZ(10rem);transform:rotateY(90deg) translateZ(10rem);}
+#page6{background-color:#673ab7;-webkit-transform:translateZ(-10rem);transform:translateZ(-10rem);}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="group">
+<div class="page"id="page1"></div>
+<div class="page"id="page2"></div>
+<div class="page"id="page3"></div>
+<div class="page"id="page4"></div>
+<div class="page"id="page5"></div>
+<div class="page"id="page6"></div>
+</div>
+</div>
+
+</body>
+</html>
